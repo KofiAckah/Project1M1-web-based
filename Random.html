@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Modify.css"/>
+</head>
+<body>
+    <div id="main">
+            <div id="Header">                        
+                <img src="images/Logo.png" alt="Logo">
+               <h2><a href="Home.html">Solution Finder </a> </h2> 
+               <input type="text" class="search-box" placeholder="   Search..."/>
+            <ul>
+               <li><a href="Home.html">Home</a></li>
+               <li><a href="Index.html">Index</a></li>
+               <li><a href="Create_New.html"> New Page</a></li>
+               <li><a href="Edit.html">Edit Page</a></li>
+               <li style="background-color: #a679f9;"><a href="Random.html" style="color: white;">Random</a></li>
+               <li><a href="MarkTo.html">Mark To Html </a></li>
+           </ul>
+           </div>
+           <div id="sec1">
+            <h1>Random Page Generator</h1>
+            <hr> 
+            <br>
+            </div>
+
+            <div class="container">   
+            <button id="randomButton">Generate Random Page</button>
+            <div id="randomPageContent"></div>
+        </div>
+        </div>
+        <footer>
+            <p>
+             &copy;2024 Solution Finder, Free Online Encyclopedia
+     
+             </p>
+         </footer>
+        <script>
+            // Sample encyclopedia entries
+            const entries = [
+                { title: "Introduction to Computer Science", content: "Computer science is the study of computation and its applications.\n It encompasses both theoretical and practical aspects of computing, including algorithms, data structures, programming languages, and the design of computer systems. Computer science plays a crucial role in various fields such as artificial intelligence, cybersecurity, and software engineering. Understanding the fundamentals of computer science is essential for anyone interested in pursuing a career in technology."},
+                { title: " Evolution of Programming Languages", content: "Programming languages have evolved significantly since the early \ndays of computing. From low-level languages like assembly language to high-level languages like Python and JavaScript, each programming language has its own syntax, semantics, and purpose. Over the years, programming languages have become more user-friendly and powerful, enabling developers to build complex software applications more efficiently. Understanding the history and characteristics of different programming languages is essential for software developers to choose the right tool for the job." },
+                { title: " Cloud Computing Explained", content: "Programming languages have evolved significantly since the early days of \ncomputing. From low-level languages like assembly language to high-level languages like Python and JavaScript, each programming language has its own syntax, semantics, and purpose. Over the years, programming languages have become more user-friendly and powerful, enabling developers to build complex software applications more efficiently. Understanding the history and characteristics of different programming languages is essential for software developers to choose the right tool for the job." },
+                { title: " Cybersecurity Basics", content: "Cybersecurity is the practice of protecting computer systems, networks, and data\n from cyber threats such as malware, phishing attacks, and data breaches. With the increasing reliance on digital technology, cybersecurity has become a critical concern for individuals, businesses, and governments worldwide. Common cybersecurity measures include antivirus software, firewalls, encryption, and multi-factor authentication. In addition to implementing security tools and protocols, cybersecurity professionals also play a vital role in detecting and responding to cyber threats to prevent potential damage and disruption." },
+                { title: " Introduction to Artificial Intelligence", content: "Artificial intelligence (AI) is a branch of computer science \nthat focuses on creating systems that can perform tasks that typically require human intelligence. These tasks include problem-solving, decision-making, speech recognition, and language translation. AI technologies such as machine learning, neural networks, and natural language processing have made significant advancements in recent years, enabling applications like virtual assistants, autonomous vehicles, and medical diagnosis systems. As AI continues to evolve, it has the potential to revolutionize various industries and improve the quality of life for people around the world." },
+                { title: " Big Data and Data Analytics", content: "Big data refers to large and complex datasets that cannot be processed using \ntraditional data processing techniques. With the proliferation of digital data from sources such as social media, sensors, and online transactions, organizations are increasingly turning to big data analytics to extract valuable insights and make data-driven decisions. Data analytics involves techniques such as data mining, predictive modeling, and statistical analysis to uncover patterns, trends, and correlations within large datasets. By harnessing the power of big data and data analytics, businesses can gain a competitive edge, optimize operations, and improve customer experiences." },
+            ];
+    
+            // Function to generate a random page
+            function generateRandomPage() {
+                const randomIndex = Math.floor(Math.random() * entries.length);
+                const randomEntry = entries[randomIndex];
+                const randomPageContent = document.getElementById("randomPageContent");
+                randomPageContent.innerHTML = `
+                    <h2>${randomEntry.title}</h2>
+                    <p>${randomEntry.content}</p>
+                `;
+            }
+    
+            // Event listener for the random page button
+            document.getElementById("randomButton").addEventListener("click", generateRandomPage);
+    
+            // Initial random page generation on page load
+            generateRandomPage();
+        </script>
+</body>
+</html>

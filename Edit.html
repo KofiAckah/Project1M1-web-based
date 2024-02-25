@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Article</title>
+    <link rel="stylesheet" href="Modify.css"
+</head>
+<body>
+    <div id="main">
+        <div id="Header">                        
+            <img src="images/Logo.png" alt="Logo">
+           <h2><a href="Home.html"> Solution Finder</a> </h2> 
+           <input type="text" class="search-box" placeholder="   Search..."/>
+        <ul>
+           <li><a href="Home.html">Home</a></li>
+           <li><a href="Index.html">Index</a></li>
+           <li><a href="Create_New.html"> New Page</a></li>
+           <li style="background-color: #a679f9;"><a href="Edit.html" style="color: white;">Edit Page</a></li>
+           <li><a href="Random.html">Random</a></li>
+           <li><a href="MarkTo.html">Mark To Html </a></li>
+       </ul>
+       </div> 
+       <div id="sec1">
+        <h1>Publish Your Work</h1>
+            <hr> 
+            <br>
+
+          </div>
+
+    <div>
+        <h1>Edit Article</h1>
+        <form id="editForm">
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title" required><br><br>
+            <label for="content">Content:</label><br>
+            <textarea id="content" name="content" rows="6" required></textarea><br><br>
+            <input type="submit" id="savecg"value="Save Changes">
+        </form>
+    </div>
+    <footer>
+        <p>
+         &copy;2024 Solution Finder, Free Online Encyclopedia
+ 
+         </p>
+     </footer>
+    <script>
+        // Sample encyclopedia entries
+        const entries = [
+            { title: "Introduction to Computer Science", content: "Content of entry 1" },
+            { title: "Evolution of Programming Languages", content: "Content of entry 2" },
+            { title: "Cloud Computing Explained", content: "Content of entry 3" },
+            { title: "Cybersecurity Basics", content: "Content of entry 4" },
+            { title: "Introduction to Artificial Intelligence", content: "Content of entry 5" },
+            { title: "Big Data and Data Analytics", content: "Content of entry 6" }
+        ];
+
+        // Function to populate the form fields with the article data
+        function populateForm(articleIndex) {
+            const article = entries[articleIndex];
+            document.getElementById("title").value = article.title;
+            document.getElementById("content").value = article.content;
+        }
+
+        // Function to handle form submission (updating the article)
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent the default form submission
+            const editedTitle = document.getElementById("title").value;
+            const editedContent = document.getElementById("content").value;
+            
+            // Update the article data (in this example, just logging the new values)
+            console.log("Edited Title:", editedTitle);
+            console.log("Edited Content:", editedContent);
+
+            // You can perform further actions here, such as updating the article in a database
+
+            // For demonstration purposes, let's redirect back to the index page after editing
+            window.location.href = "index.html";
+        }
+
+        // Function to extract the article ID from the URL query parameter
+        function getArticleIdFromUrl() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('article');
+        }
+
+        // Call the populateForm function when the page loads
+        window.onload = function() {
+            const articleId = getArticleIdFromUrl();
+            if (articleId) {
+                populateForm(parseInt(articleId) - 1); // Adjust index since IDs start from 1
+            } else {
+                console.error("No article ID provided in the URL.");
+            }
+        };
+
+        // Add event listener to the form for form submission handling
+        document.getElementById("editForm").addEventListener("submit", handleSubmit);
+    </script>
+</body>
+</html>

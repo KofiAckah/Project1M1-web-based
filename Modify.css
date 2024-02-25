@@ -1,0 +1,181 @@
+#main{
+  background-image: url(".\images\background.jpg") ;
+  text-align: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+#Header{  
+    background-color: #1f1c22;
+    display:flex; 
+    white-space: nowrap;
+    margin-left: auto;
+}
+
+body{
+    background-color: rgb(210, 210, 247);
+    width:99% ;
+}
+#sec1{
+    font-size: large;
+    background-image: url("images/background.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    color: rgb(214, 208, 219);
+    border-radius: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+hr{
+    width: 8rem;
+    background-color:rgb(50, 39, 67);
+    height: 0.4rem;
+    border-radius: 0.2rem;
+}
+
+#Header h2{
+    margin-left: 2%;
+    align-content: center;
+    display: flex;
+    color: aliceblue;
+    
+}
+#h2{
+    margin-left: 2%;
+    align-content: center;
+    display: flex;
+    color: aliceblue; 
+}
+h2 a{
+    text-decoration: none;
+    color:rgb(189, 173, 203);
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1f1c22;
+    color: white; /* Optional: Set text color to white for better visibility */
+    padding: 10px; /* Optional: Add padding for spacing */
+    text-align: center;
+} 
+#Header ul{
+    display: flex;
+    list-style: none;
+    font-size: large;
+}
+
+ul li{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 0.5rem;
+    border-radius:1rem;
+
+}
+
+ul li a{
+    text-decoration: none;
+    color:rgb(189, 173, 203);
+    white-space: nowrap;
+    padding: 7px;
+
+}
+ul li a:hover{
+    background-color: #a679f9;
+    
+}
+
+img{
+    width:50px;
+    border-radius:30px;
+    height:50px;
+    margin-top: 10px;margin-left: 20px;
+}
+#Header input{
+    height: 2rem;
+    width: 75rem;
+    align-content: center;
+    justify-content: center;
+    margin-left: 25%;
+    margin-top: 1rem;
+    border-radius: 2rem;
+    border-color: rgb(0, 128, 255)
+}
+button{
+    margin: 4rem;
+    border-radius: 10px;
+    width: 25rem;
+    height:3rem;
+    color:white;
+    background-color: rgb(24, 24, 59);
+    cursor: pointer;
+}
+#main input{
+    height: 2rem;
+    width: 25rem;
+}
+
+
+.Offer_Grid div{
+    text-align: left;
+    margin-left:1%;
+    display: flex;    
+}
+.Offer_Grid div p{
+    margin: 1rem;    
+}
+
+#sec3 p{
+    margin-left: 2rem;
+    font-size: larger;
+    background-color: #757373;
+}
+
+#sec4{
+    text-align: left;
+    margin-left:1%;
+    display: flex;
+}
+
+.container ul {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    color: #1f1c22;  
+    list-style-type: none;
+   
+}
+
+.container ul a {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    color: #1f1c22;
+    background-color: #dbd0dc;
+    border-radius: 10rem;
+    list-style-type: none;
+    margin-bottom: 20rem;   
+    gap:10rem;
+}
+
+ #savebtn, #savecg{
+    margin: 4rem;
+    border-radius: 10px;
+    width: 25rem;
+    height:3rem;
+    color:white;
+    background-color: rgb(24, 24, 59);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #96bde7;
+}
+
+#randomPageContent {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: left;
+}

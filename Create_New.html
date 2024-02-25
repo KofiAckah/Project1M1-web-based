@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create_New_Page</title>
+    <link rel="stylesheet"  href="Modify.css">
+</head>
+<body>
+    <div id="main">
+        <div id="Header">                        
+            <img src="images/Logo.png" alt="Logo">
+           <h2><a href="Home.html"> Solution Finder</a> </h2> 
+           <input type="text" class="search-box" placeholder="   Search..."/>
+        <ul>
+           <li><a href="Home.html">Home</a></li>
+           <li><a href="Index.html">Index</a></li>
+           <li style="background-color: #a679f9;"><a href="Create_New.html" style="color:  white;"> New Page</a></li>
+           <li><a href="Edit.html">Edit Page</a></li>
+           <li><a href="Random.html">Random</a></li>
+           <li><a href="MarkTo.html">Mark To Html </a></li>
+       </ul>
+       </div> 
+       <div id="sec1">
+        <h1>Publish Your Work</h1>
+            <hr> 
+            <br>
+
+          </div>
+
+
+    <div>
+        <h1>Add New Article</h1>
+        <form id="addForm">
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title" required><br><br>
+            <label for="content">Content:</label><br>
+            <textarea id="content" name="content" rows="6" required></textarea><br><br>
+            <input type="submit"  id="savebtn" value="Add Article"><br>
+        </form>
+    </div>
+    <footer>
+        <p>
+         &copy;2024 Solution Finder, Free Online Encyclopedia
+ 
+         </p>
+     </footer>
+    <script>
+        // Function to handle form submission (adding a new article)
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent the default form submission
+            const newTitle = document.getElementById("title").value;
+            const newContent = document.getElementById("content").value;
+            
+            // Add the new article data (in this example, just logging the new values)
+            console.log("New Title:", newTitle);
+            console.log("New Content:", newContent);
+
+            // You can perform further actions here, such as adding the new article to a database
+
+            // For demonstration purposes, let's redirect back to the index page after adding
+            window.location.href = "index.html";
+        }
+
+        // Add event listener to the form for form submission handling
+        document.getElementById("addForm").addEventListener("submit", handleSubmit);
+    </script>
+</body>
+</html>
+
+        
